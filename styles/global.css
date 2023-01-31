@@ -1,0 +1,45 @@
+/* 
+
+This sheet provides global styling to be used in other style sheets
+
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: var(--font-default), var(--font-fallback)
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    display: grid;
+    grid-template-rows: 7rem 1fr;
+}
+
+body > * {
+    width: 100%;
+}
+
+/* Main styles */
+#main {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Global variables */
+:root {
+    /* paint canvas color: #F1F0EC */
+    --color-primary: #202020;
+    --color-secondary-maroon: #800000;
+    --color-secondary-dark-maroon: #500000;
+    --text-color-primary: white;
+    --text-color-secondary: #dadada;
+    --font-default: 'PT Sans Caption', sans-serif;
+    --font-fallback: "Inter", sans-serif;
+    --max-width: 84vw
+}
