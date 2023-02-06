@@ -1,0 +1,38 @@
+
+
+#main {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.collage {
+    /* margin-top: 5rem;
+    margin-bottom: 5rem; */
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: .5rem;
+    /* border-radius: var(--radius); */
+}
+
+.collage-row {
+    border: 1px solid red;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+
+.collage-row img {
+    height: 100%;
+
+}

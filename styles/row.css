@@ -1,0 +1,72 @@
+/* Style for a row section */
+.row-main {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.row {
+    max-width: 78rem;
+    height: min-content;
+    padding: 1rem 3rem 1rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2rem 1fr;
+    column-gap: 3rem;
+    row-gap: .5rem;
+    background-color: var(--color-primary-light);
+    border-radius: var(--radius);
+}
+
+.row-left {
+    grid-template-areas:
+        "title title picture"
+        "body body picture";
+    text-align: left;
+}
+
+.row-right {
+    grid-template-areas:
+        "picture title title"
+        "picture body body";
+    text-align: right;
+}
+
+.row-title {
+    grid-area: title;
+    text-align: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: .3rem;
+    text-decoration-color: var(--color-secondary);
+    /* font-family: var(--font-special); */
+}
+
+.row-body {
+    grid-area: body;
+    text-align: left;
+    /* padding-left: 1rem; */
+    /* padding-right: 1rem; */
+    /* height:min-content; */
+
+    /* border: 1px dashed red; */
+}
+
+.row-image {
+    grid-area: picture;
+    aspect-ratio: 10 / 7;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 100%;
+    background-color: var(--color-tertiary-dark);
+}
+
