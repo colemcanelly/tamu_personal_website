@@ -8,7 +8,6 @@ This sheet provides global styling to be used in other style sheets
 
 /* Global variables */
 :root {
-    /* Idea => paint canvas color: #F1F0EC */
     --color-primary: #191919;
     --color-primary-light: #363636;
     --color-secondary: #500000;
@@ -41,7 +40,7 @@ body {
     background-color: var(--color-primary);
     overflow: overlay;
     display: grid;
-    grid-template-rows: 7rem 1fr;
+    grid-template-rows: 14vh 1fr;
 }
 
 body > * {

@@ -47,11 +47,13 @@ article {
 
 .photo {
     margin: .5rem;
-    width: 300px;
+    max-width: 300px;
+    /* max-height: ; */
     /* height: 425px; */
     /* background-color: var(--color-tertiary-dark); */
 }
 
 .photo img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }

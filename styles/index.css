@@ -7,23 +7,21 @@
     max-width: var(--max-width);
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 
 .collage {
-    /* margin-top: 5rem;
-    margin-bottom: 5rem; */
     height: 100%;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 24.667vh);
     row-gap: .5rem;
-    /* border-radius: var(--radius); */
+    overflow: hidden;
 }
 
 .collage-row {
-    border: 1px solid red;
-
+    height: 24.667vh;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -31,8 +29,37 @@
     column-gap: .5rem;
 }
 
+.collage-row a {
+    position: relative;
+    height: 100%;
+    background-color: var(--color-tertiary-dark);
+}
 
 .collage-row img {
     height: 100%;
+    opacity: 1;
+    transition: .3s ease;
+}
 
+.popup {
+    opacity: 0;
+    transition: .5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    
+    font-size: 1rem;
+    color: var(--color-secondary-light);
+    font-weight: bold;
+}
+
+.collage-row a:hover img {
+    opacity: .3;
+}
+
+.collage-row a:hover .popup {
+    opacity: 1;
 }
