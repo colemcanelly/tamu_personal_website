@@ -1,0 +1,36 @@
+
+
+
+
+#main {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    row-gap: 2rem;
+    grid-template-rows: 5rem 1fr;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1::after {
+    content: ".docx";
+}
+
+#resume div {
+    /* width: 80%; */
+    border: 2px solid var(--color-secondary);
+    border-radius: var(--radius);
+    padding: 5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color-primary);
+    background-color: var(--white);
+}

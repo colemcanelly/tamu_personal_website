@@ -1,0 +1,85 @@
+/* 
+
+Main styles
+
+*/
+
+#main {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    row-gap: 2rem;
+    grid-template-rows: minmax(8vh, 5.5rem) 1fr;
+    grid-template-columns: 1fr 20.05vw;
+    grid-template-areas: 
+        "title title"
+        "text aside";
+}
+
+h1 {
+    grid-area: title;
+}
+
+h1::after {
+    content: ".html";
+}
+
+#text {
+    grid-area: text;
+}
+
+#aside {
+    grid-area: aside;
+    row-gap: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+article {
+    align-self: flex-start;
+    margin: .5rem;
+}
+
+article p::before {
+    content: ">";
+}
+
+.visuals {
+    margin: .5rem;
+}
+
+.photo {
+    max-height: 35vh;
+}
+
+
+.photo img {
+    max-width: 100%;
+    max-height: inherit;
+    border-radius: var(--radius);
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem;
+    margin-top: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+}
+
+.links path {
+    fill: var(--color-tertiary-light);
+}

@@ -1,0 +1,75 @@
+
+
+#main {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.collage {
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 24.667vh);
+    row-gap: .5rem;
+    overflow: hidden;
+}
+
+.collage-row {
+    height: 24.667vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.collage-row a {
+    position: relative;
+    height: 100%;
+    background-color: var(--color-tertiary-dark);
+    border-radius: calc(var(--radius) + 2px);
+}
+
+.collage-row img {
+    height: 100%;
+    opacity: 1;
+    border-radius: var(--radius);
+    transition: .05s ease;
+}
+
+.popup {
+    opacity: 0;
+    transition: .2s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    
+    font-size: 1rem;
+    color: var(--color-secondary-light);
+    font-weight: bold;
+}
+
+.collage-row a:focus-within {
+    outline: none;
+}
+
+.collage-row a:hover img,
+.collage-row a:active img,
+.collage-row a:focus-within img {
+    opacity: .3;
+}
+
+.collage-row a:hover .popup,
+.collage-row a:active .popup,
+.collage-row a:focus-within .popup {
+    opacity: 1;
+}

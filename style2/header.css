@@ -16,6 +16,11 @@ Header styles
     justify-content:space-between;
     align-items: flex-end;
     column-gap: 10rem;
+    border-bottom: 2px dashed var(--color-secondary-light);
+}
+
+#header * {
+    text-transform: uppercase;
 }
 
 #header a {
@@ -38,8 +43,8 @@ Header styles
     padding-left: 1rem;
     
     text-decoration: underline;
-    text-decoration-thickness: .3rem;
-    text-decoration-color: var(--color-secondary);
+    /* text-decoration-thickness: .3rem; */
+    text-decoration-color: var(--color-secondary-light);
 }
 
 .subheader {
@@ -63,28 +68,28 @@ Header styles
 .style-toggle {
     align-self: flex-end;
     margin: 10% 0%;
-    background-color: var(--color-secondary);
-    border: none;
-    color: white;
+    background-color: var(--color-primary);
+    border: 2px dashed var(--color-secondary-light);
+    color: var(--color-secondary-light);
     padding: .75rem 2rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 1rem;
     border-radius: var(--radius);
-    /* border: 2px solid var(--color-tertiary); */
 }
 
 .style-toggle:hover,
 .style-toggle:focus-within {
     cursor: pointer;
-    border: 2px solid var(--color-tertiary-dark);
+    color: var(--color-tertiary-light);
+    border-color: var(--color-tertiary-light);
 }
 
 
 .style-toggle:active,
 .style-toggle:visited {
-    border: 2px solid var(--color-tertiary);
+    border: 2px dashed var(--color-tertiary-light);
 }
 
 nav {
@@ -106,7 +111,8 @@ nav {
 .dropdown:focus-within .nav-elem
 {
     outline: none;
-    background-color: var(--color-secondary);
+    border: 2px dashed var(--color-secondary-light);
+    border-bottom: none;
 }
 
 .dropdown {
@@ -126,7 +132,7 @@ nav {
     align-items: flex-end;
     left: auto;
     right: 1px;
-    border-top: 0.25rem solid transparent;
+    border-top: 0.25rem dashed transparent;
     min-width: inherit;
     z-index: 1;
 }
@@ -134,26 +140,28 @@ nav {
 .drop-item {
     align-items: flex-end;
     width: 100%;
-    color: var(--text-color-secondary);
-    background-color: var(--color-secondary);
-    border: 1px solid var(--color-secondary);
+    color: var(--text-color-primary);
+    /* background-color: var(--color-secondary); */
+    border: 2px dashed var(--color-secondary-light);
+    border-top: none;
 }
 
 .drop-item-first {
-    border-radius: var(--radius) var(--radius) 0 0;
+    border: 2px dashed var(--color-secondary-light);
 }
 
 .drop-item-single {
-    border-radius: var(--radius);
+    border: 2px dashed var(--color-secondary-light);
 }
 
 .drop-item-last {
-    border-radius: 0 0 var(--radius) var(--radius);
+    border-radius: 0;
 }
 
 .drop-item:hover, 
 .drop-item:active,
 .drop-item:focus-within {
     outline: none;
-    border: 1px solid var(--color-tertiary);
+    color: var(--color-tertiary-light);
+    border-color: var(--color-tertiary-light);
 }
