@@ -27,10 +27,10 @@ const STYLESHEET_KEY = "current_style_sheet";
 
 let setStyle = (style = "") => {
     if (style === "") style = localStorage.getItem(STYLESHEET_KEY) || "style1";
+    style = style + '/';
     document.querySelectorAll("link[href]").forEach(elem => {
         let sheet = elem.getAttribute("href").split("/")[1];
-        console.log(sheet);
-        elem.setAttribute("href", style + '/' + sheet);
+        elem.setAttribute("href", style + sheet);
     });
 }
 
