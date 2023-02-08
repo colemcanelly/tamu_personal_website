@@ -14,6 +14,7 @@ This sheet provides global styling to be used in other style sheets
     --color-secondary-light: #800000;
     --color-tertiary: white;
     --color-tertiary-dark: #dadada;
+    --color-tertiary-dark-2: #c6c6c6;
     --text-color-primary: var(--color-tertiary);
     --text-color-secondary: var(--color-tertiary-dark);
     --font-default: 'PT Sans Caption', sans-serif;

@@ -53,6 +53,40 @@ Header styles
     align-items: center;
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.style-toggle {
+    align-self: flex-end;
+    margin: 10% 0%;
+    background-color: var(--color-secondary); /* Green */
+    border: none;
+    color: white;
+    padding: .75rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    /* border: 2px solid var(--color-tertiary); */
+}
+
+.style-toggle:hover,
+.style-toggle:focus-within {
+    cursor: pointer;
+    border: 2px solid var(--color-tertiary-dark);
+}
+
+
+.style-toggle:active,
+.style-toggle:visited {
+    border: 2px solid var(--color-tertiary);
+}
+
 nav {
     min-width: 20rem;
     max-width: 25rem;
