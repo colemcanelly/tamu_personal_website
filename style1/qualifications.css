@@ -13,8 +13,8 @@ Main styles
     padding-right: 1rem;
     display: grid;
     row-gap: 2rem;
-    grid-template-rows: 5rem 1fr;
-    grid-template-columns: 1fr 30rem;
+    grid-template-rows: minmax(8vh, 5.5rem) 1fr;
+    grid-template-columns: 1fr 20.05vw;
     grid-template-areas: 
         "title title"
         "text aside";
@@ -45,15 +45,33 @@ article {
     margin: .5rem;
 }
 
-.photo {
+.visuals {
     margin: .5rem;
-    max-width: 300px;
-    /* max-height: ; */
-    /* height: 425px; */
-    /* background-color: var(--color-tertiary-dark); */
 }
+
+.photo {
+    max-height: 35vh;
+}
+
 
 .photo img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: inherit;
+    border-radius: var(--radius);
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem;
+    margin-top: 1rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+}
+
+.links path {
+    fill: var(--color-tertiary);
 }

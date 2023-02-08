@@ -109,6 +109,10 @@ nav {
     border-radius: var(--radius) var(--radius) 0 0;
 }
 
+.drop-item-single {
+    border-radius: var(--radius);
+}
+
 .drop-item-last {
     border-radius: 0 0 var(--radius) var(--radius);
 }

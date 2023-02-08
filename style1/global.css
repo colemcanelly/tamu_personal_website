@@ -52,10 +52,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    height: clamp(5rem, 5rem, 5rem);
+    height: clamp(8vh, 8vh, 5.5rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     font-size: 2rem;
+}
+
+.default-link {
+    color: var(--color-secondary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--color-secondary);
+}
+
+.default-link:hover, .default-link:active {
+    color: var(--color-secondary-light);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--color-secondary-light);
+}
+
+
+.default-link:visited {
+    /* color: var(--color-secondary); */
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    /* text-decoration-color: var(--color-secondary); */
 }

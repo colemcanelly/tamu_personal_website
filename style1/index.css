@@ -33,11 +33,13 @@
     position: relative;
     height: 100%;
     background-color: var(--color-tertiary-dark);
+    border-radius: calc(var(--radius) + 2px);
 }
 
 .collage-row img {
     height: 100%;
     opacity: 1;
+    border-radius: var(--radius);
     transition: .3s ease;
 }
 
@@ -56,10 +58,18 @@
     font-weight: bold;
 }
 
-.collage-row a:hover img {
+.collage-row a:focus-within {
+    outline: none;
+}
+
+.collage-row a:hover img,
+.collage-row a:active img,
+.collage-row a:focus-within img {
     opacity: .3;
 }
 
-.collage-row a:hover .popup {
+.collage-row a:hover .popup,
+.collage-row a:active .popup,
+.collage-row a:focus-within .popup {
     opacity: 1;
 }
